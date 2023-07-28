@@ -1,0 +1,12 @@
+#loading-container {
+  align-items: center;
+  background-color: #3f3f3f;
+  border-radius: 1rem;
+  bottom: 2rem;
+  box-shadow: 0px 0px 7px rgba(0, 0,0,0.5);
+  color: white;
+  display: flex;
+  padding: 3px 1rem;
+  position: fixed;
+  right: 2rem;
+}

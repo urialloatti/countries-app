@@ -11,15 +11,20 @@ import { Observable } from 'rxjs';
   ]
 })
 export class ByRegionPageComponent {
-  countries: Country[] = []
+
+  countries: Country[] = [];
+  isLoading: boolean = false;
 
   constructor(private countriesService: CountriesService) {}
 
   searchByRegion(term: string): void {
+
+    this.isLoading = true;
     this.countries = [];
     this.countriesService.searchRegion(term).subscribe(
       countriesList => {
         this.countries = countriesList;
+        this.isLoading = false;
       }
     );
   }
