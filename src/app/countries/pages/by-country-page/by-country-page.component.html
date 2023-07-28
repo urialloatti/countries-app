@@ -1,8 +1,13 @@
 <h4>Search country by name</h4>
 <hr>
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 <div class="row">
   <div class="col">
-    <shared-search-box placeholder="Search by country name" (onValue)="searchByCountry($event)"></shared-search-box>
+    <shared-search-box
+      placeholder="Search by country name"
+      (onValue)="searchByCountry($event)"
+      (onDebounce)="searchByCountry($event)">
+    </shared-search-box>
   </div>
 </div>
 <div class="row">
